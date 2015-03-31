@@ -20,9 +20,12 @@ So you're assigned a bunch of issues, or maybe you aren't, but either way you
 can begin by choosing one to work on. Be sure to review the details of the
 issue and make sure there's enough information for you to effectively work --
 if not you need to **describe what you need in a comment** on the issue and
-**reassign the issue to someone who can help**.
+either reference the relevant person using the @name syntax or  **reassign the
+issue to someone who can help**.
 
-> If you don't reassign an issue, it remains **your** responsibility.
+> If an issue is assigned to you it becomes your responsibility to move it
+> along and get what you need. Likewise it's everyone's responsibility to
+> respond and help get each other the necessary information.
 
 Once you're ready to begin, checkout a new branch using the issue ID as the
 branch name e.g. FWM-43, JAKO-49.
