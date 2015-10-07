@@ -1,12 +1,77 @@
 # Workflows
 
-## Asynchronous Communication
+This is a living document of common practices for
+[_smooth operation_](https://www.youtube.com/watch?v=4TYv2PhG89A) day-to-day.
+I think we should encourage conversation around this document -- what works,
+what doesn't, and how we can change for the better. The items below will be
+written in a pseudo-RFC format, utilizing the keywords listed in the IETF's
+[RFC 2119](http://tools.ietf.org/html/rfc2119).
+
+
+
+## Tools
+
+The services below provide really solid baseline support for operating a
+business. They also provide really wonderful APIs, so if there's a feature
+that's missing or that could improve our workflow **we can totally build it**.
+
+- [**Harvest**](https://www.getharvest.com/), time tracking and cost analysis
+- [**Tracker**](https://www.pivotaltracker.com/), project management and
+  planning (review the philosophy behind this tool
+  [here](https://www.pivotaltracker.com/help/gettingstarted))
+- [**Google Apps**](https://apps.google.com/), email, calendar, file store
+- [**GitHub**](https://www.github.com/), codebases and other versioned
+  resources
+- [**Slack**](https://www.slack.com/), team chat
+
+
+
+## Clients, Projects, and Tasks
+
+- organization
+- how they relate to services listed above
+
+##### Defining Stories
+
+...
+
+##### Supporting Assets
+
+...
+
+##### Tracking Time
 
 ...
 
 
 
-## Issue Creation
+## Communication
+
+- when to use what
+- best practices
+
+##### Email
+
+...
+
+##### Chat (Slack)
+
+...
+
+##### Meetings
+
+...
+
+
+
+## Onboarding
+
+- add accounts for tools listed above
+- ???
+
+
+
+## Design
 
 ...
 
@@ -14,63 +79,21 @@
 
 ## Development
 
-#### Getting Started
+##### Tools
 
-So you're assigned a bunch of issues, or maybe you aren't, but either way you
-can begin by choosing one to work on. Be sure to review the details of the
-issue and make sure there's enough information for you to effectively work --
-if not you need to **describe what you need in a comment** on the issue and
-either reference the relevant person using the @name syntax or  **reassign the
-issue to someone who can help**.
+...
 
-> If an issue is assigned to you it becomes your responsibility to move it
-> along and get what you need. Likewise it's everyone's responsibility to
-> respond and help get each other the necessary information.
+##### Git
 
-Once you're ready to begin, checkout a new branch using the issue ID as the
-branch name e.g. FWM-43, JAKO-49.
+...
 
-![Issue Branches](resources/branches.png)
+##### CI / CD
 
-#### While You're Working
+...
 
-While you're working on the issue be sure to **rebase from `master`** often.
-The short explanation is that this helps to maintain a cleaner repo history,
-free of extra merge commits. If you want to read more about rebasing vs.
-merging, [check this out](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).
+##### Testing
 
-#### When You've Finished
+...
 
-When you're ready for the issue to be reviewed by a teammate you need to do
-a few things.
-
-1.  be sure to **rebase from `master` one last time** and push your latest
-    updates to a remote branch first.
-2.  create a **pull request** using the using the issue's ID and description,
-    e.g. ![Pull Request](resources/pr.png)
-
-3.  **comment on the issue** describing the current state (whether it was
-    staged and where, etc.) and **reassign the issue** to the appropriate
-    teammate.
-
-#### Reviewing An Issue
-
-If you're on the receiving end of a completed issue / pull request, it's your
-responsibility to review the commits, ensure quality, and either approve or
-deny the contribution. Obviously the depth of the review can vary depending on
-the scope of the issue -- you'd treat a tiny styling bug differently than a
-major feature, so use your judgement. If the issue encompasses a new feature
-you'll want to checkout the branch locally and run tests yourself to make sure
-everything checks out, whereas a small bug can likely be approved immediately.
-
-Once you've reviewed and accepted the issue you can take the following steps:
-
-1. merge the PR and delete the issue branch
-2. comment on the issue describing current state
-3. move the issue to "Done"
-
-You can optionally deploy the updates to production yourself or ask someone
-who has that capability to take care of it, otherwise the updates will go up
-with the next deployment.
 
 
