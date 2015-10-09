@@ -60,7 +60,24 @@ that's missing or that could improve our workflow **we can totally build it**.
 
 ##### Meetings
 
-...
+These can get unweildy quickly, and we've all got limited space in our heads,
+so let's keep them as simple and understandable as possible. When you need to
+add a calendar event you **SHOULD** follow these steps:
+
+- prefix the event with the client code e.g. `[JAKO]` or `[COG]` -- this makes
+  it easy to see what the meeting is about at a glace. Use `[CC]` for Code &
+  Craft
+- include the purpose of the meeting in the description
+- include links to relevant items in our PM tool
+- add the event to _Code & Craft_ Google calendar so it's visible to everyone
+  [screenshot](resources/meetings-calendar.png)
+- invite everyone (including yourself) that needs to be involved
+- allow guests to modify the meeting so anyone can keep it updated
+  [screenshot](resources/meetings-modify.png)
+
+> **Note:** many suggest keeping meetings to [15 minutes or less](https://open.bufferapp.com/how-to-hold-a-better-meeting-research/),
+> so unless it's a whiteboarding session (or something similar) try to stick
+> to a timeline.
 
 
 
