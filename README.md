@@ -1,6 +1,6 @@
-# Workflows
+# Workflow
 
-This is a living document of common practices for
+This is a living document of common, company-wide practices for
 [_smooth operation_](https://www.youtube.com/watch?v=4TYv2PhG89A) day-to-day.
 I think we should encourage conversation around this document -- what works,
 what doesn't, and how we can change for the better. The items below will be
@@ -31,15 +31,15 @@ that's missing or that could improve our workflow **we can totally build it**.
 - organization
 - how they relate to services listed above
 
-##### Defining Stories
+#### Defining Stories
 
 ...
 
-##### Supporting Assets
+#### Supporting Assets
 
 ...
 
-##### Tracking Time
+#### Tracking Time
 
 ...
 
@@ -50,29 +50,29 @@ that's missing or that could improve our workflow **we can totally build it**.
 - when to use what
 - best practices
 
-##### Email
+#### Email
 
 ...
 
-##### Chat (Slack)
+#### Chat (Slack)
 
 ...
 
-##### Meetings
+#### Meetings
 
 These can get unweildy quickly, and we've all got limited space in our heads,
 so let's keep them as simple and understandable as possible. When you need to
 add a calendar event you **SHOULD** follow these steps:
 
 - prefix the event with the client code e.g. `[JAKO]` or `[COG]` -- this makes
-  it easy to see what the meeting is about at a glace. Use `[CC]` for Code &
-  Craft
-- include the purpose of the meeting in the description
-- include links to relevant items in our PM tool
-- add the event to _Code & Craft_ Google calendar so it's visible to everyone
+  it easy to see what the meeting is about at a glance. Use `[CC]` for Code &
+  Craft internal meetings.
+- include the purpose of the meeting in the description.
+- include links to relevant items in our PM tool.
+- add the event to _Code & Craft_ Google calendar so it's visible to everyone.
   [screenshot](resources/meetings-calendar.png)
-- invite everyone (including yourself) that needs to be involved
-- allow guests to modify the meeting so anyone can keep it updated
+- invite everyone (including yourself) that needs to be involved.
+- allow guests to modify the meeting so anyone can keep it updated.
   [screenshot](resources/meetings-modify.png)
 
 > **Note:** many suggest keeping meetings to [15 minutes or less](https://open.bufferapp.com/how-to-hold-a-better-meeting-research/),
@@ -96,19 +96,28 @@ add a calendar event you **SHOULD** follow these steps:
 
 ## Development
 
-##### Tools
+#### Styleguides & Linting
+
+We keep common styleguides accessible here so we can maintain consistency
+across projects, prototypes, etc. You **SHOULD** include the linter files in
+any new project and maintain coding style.
+
+- **JavaScript**, [styleguide](styleguides/javascript.md) and [JSCS config](resources/.jscsrc)
+- **SCSS**, [styleguide](styleguides/scss.md) and [Sass Lint config](resources/.sass-lint.yml)
+
+#### Tools
 
 ...
 
-##### Git
+#### Git
 
 ...
 
-##### CI / CD
+#### CI / CD
 
 ...
 
-##### Testing
+#### Testing
 
 ...
 

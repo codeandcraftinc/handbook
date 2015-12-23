@@ -1,0 +1,9 @@
+files:
+  include: '...'
+rules:
+  indentation:
+    - 2
+    -
+      size: 2
+  property-sort-order:
+    - 1
