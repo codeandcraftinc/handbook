@@ -45,6 +45,12 @@ that's missing or that could improve our workflow **we can totally build it**.
 
 
 
+## QA
+
+...
+
+
+
 ## Communication
 
 - when to use what
