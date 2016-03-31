@@ -149,7 +149,16 @@ Continuous deployment can be accomplished by our hosting platform,
 Github repository and run an automated deploy to staging _after the CI has
 completed_.
 
-#### Checklist
 
-- [ ] test
 
+## Checklists
+
+#### Team Monthly
+
+- [ ] company outing
+- [ ] reimburse expenses
+
+#### Individual Monthly
+
+- [ ] attend a meetup
+- [ ] publish a blog post
