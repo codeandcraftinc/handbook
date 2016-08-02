@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "doctoc": "^1.2.0"
+  },
+  "scripts": {
+    "build": "doctoc README.md"
+  }
+}

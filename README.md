@@ -1,11 +1,201 @@
 # Handbook
 
 This is a living document of common, company-wide practices for
-[_smooth operation_](https://www.youtube.com/watch?v=4TYv2PhG89A) day-to-day.
-I think we should encourage conversation around this document -- what works,
-what doesn't, and how we can change for the better. The items below will be
-written in a pseudo-RFC format, utilizing the keywords listed in the IETF's
+[_smooth operation_](https://www.youtube.com/watch?v=4TYv2PhG89A). We should
+encourage conversation around this document -- what works, what doesn't, and
+how we can change for the better. The items below will be written in a
+pseudo-RFC format, utilizing the keywords listed in the IETF's
 [RFC 2119](http://tools.ietf.org/html/rfc2119).
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Engineering](#engineering)
+  - [General](#general)
+  - [Hosting](#hosting)
+  - [Source Control](#source-control)
+  - [Frontend](#frontend)
+    - [Example Component](#example-component)
+    - [CSS](#css)
+      - [Guidelines](#guidelines)
+      - [Why?](#why)
+    - [JS](#js)
+    - [Tooling](#tooling)
+  - [Backend](#backend)
+- [Tools](#tools)
+- [Clients, Projects, and Tasks](#clients-projects-and-tasks)
+    - [Defining Stories](#defining-stories)
+    - [Supporting Assets](#supporting-assets)
+    - [Tracking Time](#tracking-time)
+- [Communication](#communication)
+    - [Email](#email)
+    - [Chat (Slack)](#chat-slack)
+    - [Meetings](#meetings)
+- [Onboarding](#onboarding)
+- [Design](#design)
+- [Development](#development)
+    - [Stack](#stack)
+    - [Styleguides & Linting](#styleguides-&-linting)
+    - [Build Tools](#build-tools)
+    - [Source Control](#source-control-1)
+    - [Testing](#testing)
+    - [Hosting](#hosting-1)
+    - [Continuous Integration (CI) / Continuous Deployment (CD)](#continuous-integration-ci--continuous-deployment-cd)
+    - [Checklist](#checklist)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Engineering
+
+### General
+
+- use homebrew, nodenv, rbenv, phpenv
+
+### Hosting
+
+...
+
+### Source Control
+
+...
+
+### Frontend
+
+We follow a component-based approach to building on the frontend, as well as
+some general guidlines around JS, CSS, and tooling. This approach is not
+limited to a specific library -- the pattern can be applied using vanilla JS
+and CSS or React and Sass.
+
+#### Example Component
+
+Review the [example component](resources/example-app) for an overview of how
+to structure your code.
+
+#### CSS
+
+We use a modified BEM syntax for our styling which includes additional "is"
+classes to indicate state.
+
+```sass
+.block__element {
+  &--modifier {}
+  &.is-class {}
+}
+```
+
+A **block** is a top-level component, an **element** represents the document
+hierarchy within the block, and **modifier** alters the base element in some
+way, and an **"is" class** modifies an element's state.
+
+##### Guidelines
+
+1. **No more than two elements per block.** If you've gotten that deep in the
+hierarchy ask yourself if you can break it up into smaller components. Three levels of elements is not unheard of, but use sparingly.
+
+  ```sass
+  .example-block {}
+  .example-block__element {}
+  .example-block__element__element {}
+
+  // too deep!
+  .example-block__element__element__element {}
+  ```
+
+2. **Use Sass nesting for modifiers and "is" classes.** This keeps the minor
+altering classes contained with their specific elements.
+
+  ```sass
+  .example-block {
+    background-color: white;
+    &--dark {
+      background-color: black;
+    }
+    // put "is" classes below modifiers so they take precedence
+    &.is-primary {
+      background-color: blue;
+    }
+  }
+  ```
+
+3. **Use kebab case for multi-word components of class names.** This improves
+visual comprehension.
+
+  ```sass
+  // good
+  .example-block__element {}
+  .example-block__long-element {}
+
+  // no good
+  .example_block__element {}
+  .example_block__long_element {}
+  ```
+
+4. **JS should only touch "is" classes.** Keep the surface area where JS can
+alter your CSS small and easy to comprehend.
+
+5. **Opt for CSS psuedo classes over JS.** For example, use `::hover` vs.
+`.on('hover', ...)` for performance and maintainability.
+
+6. **Style components _mobile-first_.** Let the desktop browser do more work.
+
+  ```sass
+  .example-component {
+    width: 100%;
+    @media (min-width: 992px) {
+      width: 300px;
+    }
+  }
+  ```
+
+7. **Nest media queries.** Keep all component transformations in one place (see
+example in 6).
+
+##### Why?
+
+1. Easy to search your source code for styles you find when inspecting sites
+in the browser.
+
+2. Rebuilding a component based on the class names alone is relatively
+straightforward.
+
+3. Easy to understand what effects JavaScript has on the component.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```sass
+.example-component {
+  color: #fff;
+  font-size: 12px;
+}
+  .example-component__heading {
+    font-size: 16px;
+    &--lg {
+      font-size: 20px;
+    }
+  }
+```
+
+#### JS
+
+#### Tooling
+
+### Backend
+
+...
+
+
 
 
 
