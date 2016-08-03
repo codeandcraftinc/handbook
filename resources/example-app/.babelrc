@@ -1,0 +1,16 @@
+{
+  "plugins": [
+    [
+      "module-alias",
+      [
+        {
+          "expose": "_",
+          "src": "./lib"
+        }
+      ]
+    ]
+  ],
+  "presets": [
+    "node5"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "devDependencies": {
+    "babel-cli": "6.11.4",
+    "babel-core": "6.11.4",
+    "babel-plugin-module-alias": "1.6.0",
+    "babel-preset-node5": "11.1.0",
+    "eslint": "3.2.2",
+    "webpack": "1.13.1"
+  },
+  "engines": {
+    "npm": "3.9.3",
+    "node": "6.2.1"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "single",
+        {
+          "allowTemplateLiterals": true
+        }
+      ],
+      "semi": [
+        "error",
+        "never"
+      ]
+    }
+  },
+  "plugins": [
+    [
+      "module-alias",
+      [
+        {
+          "expose": "_",
+          "src": "./lib"
+        }
+      ]
+    ]
+  ],
+  "presets": [
+    "node5"
+  ],
+  "scripts": {
+    "build": "npm run build:clean && npm run build:transpile",
+    "build:clean": "rm -rf dist",
+    "build:transpile": "babel lib -d dist",
+    "test": "npm run test:lint",
+    "test:lint": "eslint lib/*.js"
+  }
+}

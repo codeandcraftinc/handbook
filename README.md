@@ -69,7 +69,7 @@ and CSS or React and Sass.
 
 #### Example Component
 
-Review the [example component](resources/example-app) for an overview of how
+Review the [example application](resources/example-app) for an overview of how
 to structure your code.
 
 #### CSS
@@ -86,7 +86,16 @@ classes to indicate state.
 
 A **block** is a top-level component, an **element** represents the document
 hierarchy within the block, and **modifier** alters the base element in some
-way, and an **"is" class** modifies an element's state.
+way, and an **"is" class** modifies an element's state. We find this method has
+some benefits:
+
+1. Easy to search your source code for styles you find when inspecting sites in
+the browser.
+
+2. Rebuilding a component based on the class names alone is relatively
+straightforward.
+
+3. Easy to understand what effects JavaScript has on the component.
 
 ##### Guidelines
 
@@ -135,7 +144,8 @@ visual comprehension.
 alter your CSS small and easy to comprehend.
 
 5. **Opt for CSS psuedo classes over JS.** For example, use `::hover` vs.
-`.on('hover', ...)` for performance and maintainability.
+`.on('hover', ...)` for performance and maintainability. If you're building a
+complex animation feel free to use GSAP or otherwise.
 
 6. **Style components _mobile-first_.** Let the desktop browser do more work.
 
@@ -151,15 +161,9 @@ alter your CSS small and easy to comprehend.
 7. **Nest media queries.** Keep all component transformations in one place (see
 example in 6).
 
-##### Why?
+8. **Don't build your own grid.** Use the Bootstrap grid, or another grid. We
+don't need to reinvent square wheels.
 
-1. Easy to search your source code for styles you find when inspecting sites
-in the browser.
-
-2. Rebuilding a component based on the class names alone is relatively
-straightforward.
-
-3. Easy to understand what effects JavaScript has on the component.
 
 
 
